@@ -99,7 +99,13 @@ public class DealershipApplication
 
     private void searchByMileage()
     {
-        UserInterface.displayMessage("search by mileage");
+        UserInterface.displayMessage("\n Search by mileage");
+        UserInterface.displayMessage("--------------------------");
+        int minMileage = UserInterface.getUserInputInt("Minimum Mileage: ");
+        int maxMileage = UserInterface.getUserInputInt("Maximum Mileage: ");
+
+        ArrayList<Vehicle> vehicles = dealership.getVehiclesByMileage(int min, int max)
+        UserInterface.displayColors(vehicles);
     }
 
     private void searchByVehicleType()
