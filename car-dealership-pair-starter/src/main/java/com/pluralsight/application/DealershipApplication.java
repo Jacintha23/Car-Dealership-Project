@@ -110,7 +110,13 @@ public class DealershipApplication
 
     private void searchByVehicleType()
     {
-        UserInterface.displayMessage("search by vehicle type");
+        UserInterface.displayMessage("\n Search by vehicle type");
+        UserInterface.displayMessage("--------------------------");
+        String vehicleType = UserInterface.getUserInputString("Vehicle Type: ");
+
+        ArrayList<Vehicle> vehicles = dealership.getVehiclesByType(String type)
+        UserInterface.displayColors(vehicles);
+
     }
 
     private void addVehicle()
